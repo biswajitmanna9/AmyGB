@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="row">
+      <div class="col-md-3">
+        <ng-select [searchable]="false" [clearable]="false" placeholder="Select Filter" (change)="onFilterChange($event)"
+          [(ngModel)]="filterKey">
+          <!-- <ng-option value="StoreID">Store</ng-option> -->
+          <ng-option value="GeographicalID">Location</ng-option>
+          <ng-option value="DemoGraphicID">Graphic</ng-option>
+        </ng-select>
+      </div>
+      <div class="col-md-12">
+        <div class="chart">
+          <canvas #lineChart></canvas>
+        </div>
+      </div>
+    </div>
+  </div>

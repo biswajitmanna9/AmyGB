@@ -1,0 +1,45 @@
+<div class="container">
+    <h1 class="text-center">{{title}}</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <input type="file" (change)="onFileChange($event)" multiple="false" />
+        </div>
+        <div class="col-md-12" *ngIf="result.length > 0">
+            <ngb-tabset class="data-source-wrapper" #tabset>
+                <ngb-tab id="one">
+                    <ng-template ngbTabTitle>
+                        <span>Task 1 </span>
+                    </ng-template>
+                    <ng-template ngbTabContent>
+                        <task-one [result]="result" [storeList]="storeList" [locationList]="locationList" [demoGraphicList]="demoGraphicList"></task-one>
+                    </ng-template>
+                </ngb-tab>
+                <ngb-tab id="two">
+                    <ng-template ngbTabTitle>
+                        <span> Task 2</span>
+                    </ng-template>
+                    <ng-template ngbTabContent>
+                        <task-two [result]="result" [storeList]="storeList" [locationList]="locationList" [demoGraphicList]="demoGraphicList"></task-two>
+                    </ng-template>
+                </ngb-tab>
+                <!-- <ngb-tab id="three">
+                    <ng-template ngbTabTitle>
+                        <span>Task 3</span>
+                    </ng-template>
+                    <ng-template ngbTabContent>
+                        <task-three></task-three>
+                    </ng-template>
+                </ngb-tab> -->
+                <ngb-tab id="four">
+                    <ng-template ngbTabTitle>
+                        <span>Task 4</span>
+                    </ng-template>
+                    <ng-template ngbTabContent>
+                        <task-four [result]="result" [storeList]="storeList" [locationList]="locationList" [demoGraphicList]="demoGraphicList"></task-four>
+                    </ng-template>
+                </ngb-tab>
+            </ngb-tabset>
+        </div>
+    </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
