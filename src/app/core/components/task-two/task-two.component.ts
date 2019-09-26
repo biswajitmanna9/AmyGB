@@ -166,7 +166,7 @@ export class TaskTwoComponent implements OnInit {
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: "Overall sales trends for the entire year based on " + name + " under " + d['legend'] + " of " + d['label']
+          text: "Overall sales trends based on " + name + " under " + d['legend'] + " of " + d['label']
         },
         legend: {
           display: false
